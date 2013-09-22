@@ -1,0 +1,43 @@
+= MorpherInflecter
+
+Morpher.ru webservice client (provides Russian language pluralization)
+
+This gem based on yandex_inflect gem by Yaroslav Markin.
+
+== Installation
+
+Add this line to your application's Gemfile:
+
+    gem 'morpher_inflecter'
+
+And then execute:
+
+    $ bundle install
+
+Or install it yourself as:
+
+    $ gem install morpher_inflecter
+
+== Usage
+
+  > MorpherInflecter.inflections("рубин")
+  => {:singular=>["рубин", "рубина", "рубину", "рубин", "рубином", "рубине"], :plural=>["рубины", "рубинов", "рубинам", "рубины", "рубинами", "рубинах"]}
+  > MorpherInflecter.inflections("рубины")
+  => {:plural=>["рубины", "рубинов", "рубинам", "рубины", "рубинами", "рубинах"]}
+  > MorpherInflecter.inflections("ЭтогоСловаНетВСловаре")
+  => {:error => 5}
+
+The nil will be returned if occur in connection with Web Services.
+
+If you have account on the morpher.ru:
+
+  > MorpherInflecter.inflections("рубин", yourlogin, your_password)
+
+
+== Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
