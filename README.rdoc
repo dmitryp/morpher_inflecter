@@ -1,4 +1,5 @@
 = MorpherInflecter
+{<img src="https://secure.travis-ci.org/dmitryp/morpher_inflecter.png" />}[http://travis-ci.org/dmitryp/morpher_inflecter]
 
 Morpher.ru webservice client (provides Russian language pluralization)
 
