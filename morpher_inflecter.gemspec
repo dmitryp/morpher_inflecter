@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.has_rdoc = true
-  gem.extra_rdoc_files = ["README.rdoc", "LICENSE"]
+  gem.extra_rdoc_files = ["README.rdoc", "LICENSE.txt"]
 
   gem.add_dependency "nokogiri"
   gem.add_development_dependency "rspec", '2.6'
