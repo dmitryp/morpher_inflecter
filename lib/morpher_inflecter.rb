@@ -6,6 +6,8 @@ require 'open-uri'
 require 'json'
 
 module MorpherInflecter
+  URL = 'https://ws3.morpher.ru/russian/declension'.freeze
+
   # Падежи
   CASES = %w(И Р Д В Т П)
 
@@ -28,7 +30,7 @@ module MorpherInflecter
       params = { s: text }
       params[:token] = token if token
 
-      uri = URI('https://ws3.morpher.ru/russian/declensionw')
+      uri = URI(MorpherInflecter::URL)
       uri.query = URI.encode_www_form(params)
 
       JSON.parse( open(uri, 'Accept' => 'application/json').read )
