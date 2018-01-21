@@ -21,7 +21,6 @@ Gem::Specification.new do |gem|
   gem.has_rdoc = true
   gem.extra_rdoc_files = ["README.rdoc", "LICENSE.txt"]
 
-  gem.add_dependency "nokogiri"
   gem.add_development_dependency "rspec", '2.6'
   gem.add_development_dependency "rake"
 end
